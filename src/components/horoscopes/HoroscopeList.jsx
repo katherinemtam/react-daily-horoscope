@@ -22,7 +22,7 @@ HoroscopeList.propTypes = {
   horoscopes: PropTypes.arrayOf(
     PropTypes.shape({
       sign: PropTypes.string.isRequired,
-      dateRange: PropTypes.string.isRequired,
+      dateRange: PropTypes.string,
       description: PropTypes.string.isRequired,
     })
   ).isRequired,
