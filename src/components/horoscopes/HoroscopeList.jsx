@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Horoscope from './Horoscope';
-import { Link } from 'react-router-dom';
+import './HoroscopeList.css';
 
 const HoroscopeList = ({ horoscopes }) => {
   console.log(horoscopes);
   const horoscopeElements = horoscopes.map(horoscope => (
-    <li key={horoscope.description}>
+    <ul key={horoscope.description} >
       <Horoscope
         sign={horoscope.sign}
         dateRange={horoscope.date_range}
         description={horoscope.description}
       />
-      <Link to="/:sign">Click for more!</Link>
-    </li>
+    </ul>
   ));
 
   return <ul>{horoscopeElements}</ul>;
