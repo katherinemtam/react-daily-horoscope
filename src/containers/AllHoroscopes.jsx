@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HoroscopeList from '../components/horoscopes/HoroscopeList';
 import { fetchHoroscopes } from '../services/horoscopes.js';
+import './AllHoroscopes.css';
 
 export default class AllHoroscopes extends Component {
   state = {
@@ -18,6 +19,11 @@ export default class AllHoroscopes extends Component {
 
     if(loading) <h1>Loading...</h1>;
    
-    return <HoroscopeList horoscopes={horoscopes}/>;  
+    return (
+      <>
+        <h1>Today's Horoscope!</h1>
+        <HoroscopeList horoscopes={horoscopes}/>;  
+      </>
+    );
   } 
 }

@@ -3,4 +3,5 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding: 0;
 }

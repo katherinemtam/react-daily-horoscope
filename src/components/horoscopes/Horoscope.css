@@ -9,7 +9,7 @@ li {
   margin: 10px;
 }
 
-h1, h3 {
+div h1, div h3 {
   margin: 0; 
   padding: 0;
 }
