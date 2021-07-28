@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const HoroscopeDetail = ({ sign, dataRange, description, compatibility, mood, color, luckyNumber, luckyTime }) => (
+const HoroscopeDetail = ({ sign, dateRange, description, compatibility, mood, color, luckyNumber, luckyTime }) => (
   <>
-    <h1>{sign}'s Detail Page</h1>
-    <h3>{dataRange}</h3>
+    <h1>{sign}</h1>
+    <h3>{dateRange}</h3>
     
     <p>Compatibility: {compatibility}</p>
     <p>Lucky Number: {luckyNumber}</p>
@@ -17,7 +17,7 @@ const HoroscopeDetail = ({ sign, dataRange, description, compatibility, mood, co
 
 HoroscopeDetail.propTypes = {
   sign: PropTypes.string,
-  dataRange: PropTypes.string,
+  dateRange: PropTypes.string,
   description: PropTypes.string,
   compatibility: PropTypes.string,
   mood: PropTypes.string,
@@ -25,3 +25,5 @@ HoroscopeDetail.propTypes = {
   luckyNumber: PropTypes.string,
   luckyTime: PropTypes.string
 };
+
+export default HoroscopeDetail;
