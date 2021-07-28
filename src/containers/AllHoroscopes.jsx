@@ -17,7 +17,7 @@ export default class AllHoroscopes extends Component {
   render() {
     const { horoscopes, loading } = this.state;
 
-    if(loading) <h1>Loading...</h1>;
+    if(loading) return <h1>Loading...</h1>;
    
     return (
       <>
