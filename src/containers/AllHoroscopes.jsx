@@ -7,23 +7,32 @@ export default class AllHoroscopes extends Component {
   state = {
     horoscopes: [],
     loading: true,
+    datetime: ''
   };
 
   async componentDidMount() {
     const horoscopes = await fetchHoroscopes();
-    this.setState({ horoscopes, loading: false });
+    const currentdate = new Date();
+    const datetime = 'Last Sync: ' + (currentdate.getMonth() + 1) + '/'
+      + currentdate.getDate() + '/'
+      + currentdate.getFullYear() + ' @ '
+      + currentdate.getHours() + ':'
+      + currentdate.getMinutes();
+    this.setState({ horoscopes, loading: false, datetime });
   }
 
   render() {
-    const { horoscopes, loading } = this.state;
+    const { horoscopes, loading, datetime } = this.state;
 
-    if(loading) <h1>Loading...</h1>;
+    if(loading) return <h1>Loading...</h1>;
    
     return (
       <>
         <h1>Today's Horoscope!</h1>
+        <h2>{datetime}</h2>
         <HoroscopeList horoscopes={horoscopes}/>;  
       </>
     );
   } 
 }
+

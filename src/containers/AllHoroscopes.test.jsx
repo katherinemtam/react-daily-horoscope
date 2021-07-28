@@ -1,10 +1,10 @@
 import React from 'react';
-import { render, screen } from '@testing-library/jest-dom';
-import AllHoroscopes from '../';
+import { render, screen } from '@testing-library/react';
+import AllHoroscopes from './AllHoroscopes';
 
 describe('AllHoroscopes container', () => {
   it('renders a list of horoscopes for today', async () => {
-    render(<AllHoroscopes/>);
+    render(<AllHoroscopes />);
 
     screen.getByText('Loading...');
 
