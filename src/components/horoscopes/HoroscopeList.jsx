@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import Horoscope from './Horoscope';
 
 const HoroscopeList = ({ horoscopes }) => {
+  console.log(horoscopes);
   const horoscopeElements = horoscopes.map(horoscope => (
     <li key={horoscope.description}>
       <Horoscope
-        compatibility={horoscope.compatibility}
-        luckyNumber={horoscope.lucky_number}
-        color={horoscope.color}
-        mood={horoscope.mood} 
+        sign={horoscope.sign}
+        dateRange={horoscope.date_range}
+        description={horoscope.description}
       />
     </li>
   ));
@@ -20,10 +20,9 @@ const HoroscopeList = ({ horoscopes }) => {
 HoroscopeList.propTypes = {
   horoscopes: PropTypes.arrayOf(
     PropTypes.shape({
-      compatibility: PropTypes.string.isRequired,
-      lucky_number: PropTypes.string.isRequired,
-      color: PropTypes.string.isRequired,
-      mood: PropTypes.string.isRequired
+      sign: PropTypes.string.isRequired,
+      dateRange: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
     })
   ).isRequired,
 };

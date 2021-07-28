@@ -1,20 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Horoscope = ({ compatibility, luckyNumber, color, mood }) => { 
+const Horoscope = ({ sign, dateRange, description }) => { 
   return (<>
-    <p>Compatibility: {compatibility}</p>
-    <p>Lucky Number: {luckyNumber}</p>
-    <p>Color: {color}</p>
-    <p>Mood: {mood}</p>
+    <h1>{sign}</h1>
+    <h3>{dateRange}</h3>
+    <p>{description}</p>
   </>);
 };
 
 Horoscope.propTypes = {
-  compatibility: PropTypes.string,
-  luckyNumber: PropTypes.string,
-  color: PropTypes.string,
-  mood: PropTypes.string,
+  sign: PropTypes.string,
+  dateRange: PropTypes.string,
+  description: PropTypes.string,
 };
 
 export default Horoscope;
