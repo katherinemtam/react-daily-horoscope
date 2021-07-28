@@ -17,8 +17,7 @@ export default class AllHoroscopes extends Component {
       + currentdate.getDate() + '/'
       + currentdate.getFullYear() + ' @ '
       + currentdate.getHours() + ':'
-      + currentdate.getMinutes() + ':'
-      + currentdate.getSeconds();
+      + currentdate.getMinutes();
     this.setState({ horoscopes, loading: false, datetime });
   }
 
@@ -36,3 +35,4 @@ export default class AllHoroscopes extends Component {
     );
   } 
 }
+
