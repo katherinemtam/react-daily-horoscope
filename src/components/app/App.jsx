@@ -16,15 +16,11 @@ class App extends Component {
           <main>
             <Switch>
               <Route path="/" exact={true}
-                render={routerProps => (
-                  <AllHoroscopes {...routerProps} />
-                )}
+                component={AllHoroscopes}
               />
 
               <Route path="/:sign" exact={true}
-                render={routerProps => (
-                  <DetailPage {...routerProps} />
-                )}
+                component={DetailPage} 
               />
 
               <Redirect to="/" />
