@@ -6,13 +6,13 @@ import './HoroscopeList.css';
 const HoroscopeList = ({ horoscopes }) => {
   console.log(horoscopes);
   const horoscopeElements = horoscopes.map(horoscope => (
-    <ul key={horoscope.description} >
+    <li key={horoscope.description} >
       <Horoscope
         sign={horoscope.sign}
         dateRange={horoscope.date_range}
         description={horoscope.description}
       />
-    </ul>
+    </li>
   ));
 
   return <ul>{horoscopeElements}</ul>;
