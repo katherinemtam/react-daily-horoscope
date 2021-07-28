@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Horoscope from './Horoscope';
+import { Link } from 'react-router-dom';
 
 const HoroscopeList = ({ horoscopes }) => {
   console.log(horoscopes);
@@ -11,6 +12,7 @@ const HoroscopeList = ({ horoscopes }) => {
         dateRange={horoscope.date_range}
         description={horoscope.description}
       />
+      <Link to="/:sign">Click for more!</Link>
     </li>
   ));
 
